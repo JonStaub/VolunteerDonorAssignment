@@ -1,0 +1,63 @@
+﻿@model IEnumerable<VolunteerDonorAssignment.Models.Donor>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Welcome Employee!</h1>
+<div class="container-lg">
+    <div class="row pt-4">
+        <div class="col-8">
+            <h2 class="text-primary">Donor Information</h2>
+        </div>
+        <div class="col-4 text-right">
+            <a asp-action="AddDonor" class="btn btn-primary">Add Donor</a>
+        </div>
+    </div>
+    <br />
+
+    @if (Model.Count() > 0)
+    {
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Phone Number
+                    </th>
+                    <th>
+                        Email Address
+                    </th>
+                    <th>
+                        Donor Notes
+                    </th>
+                    <th>
+                        Changes
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var donor in Model)
+                {
+                    <tr>
+                        <td width="15%">@donor.FirstName @donor.LastName</td>
+                        <td width="15%">@donor.PhoneNumber</td>
+                        <td width="25%">TODO: Retrieve data from Email table</td>                        
+                        <td width="25%">TODO: Retrieve data from DonorNote table</td>
+                        <td width="20%">
+                            <div class="w-100 btn-group" role="group">
+                                <a asp-controller="Employee" asp-action="Update" asp-route-Id="@donor.DonorId" class="btn btn-primary mx-1">Change</a> 
+                                <a asp-controller="Employee" asp-action="Delete" asp-route-Id="@donor.DonorId" class="btn btn-danger mx-1">Remove</a>                                
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>Donor Information Cannot Be Accessed</p>
+    }
+</div>

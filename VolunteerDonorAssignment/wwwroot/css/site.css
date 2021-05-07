@@ -1,0 +1,336 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+/*
+    To Do:
+    -Find what is breaking the style sheets
+    -reformat css to place buttons on slide show
+    -prevent new additions from breaking the grandfathered style
+
+*/
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.sld {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-image: url(../images/PY+logo-primary.png);
+    background-position: center bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.slider {
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-img {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 40px;
+    background-image: url(./images/pattern-bg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.slide-text {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(./images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-size: 80px;
+    background-position: top center;
+}
+
+.testimonial-text {
+    font-weight: 300;
+    font-size: .7rem;
+    line-height: 1rem;
+    color: hsl(240, 38%, 20%);
+}
+
+.author-text {
+    margin-top: 20px;
+    color: hsl(240, 38%, 20%);
+    font-size: .5rem;
+    font-weight: 700;
+}
+
+    .author-text span {
+        color: hsl(240, 18%, 77%);
+        font-weight: 500;
+        display: block;
+    }
+
+.slide-img img {
+    height: 100%;
+    width: 300px;
+}
+
+.prev,
+.next {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+
+    .prev:hover,
+    .next:hover {
+        background-color: antiquewhite;
+    }
+
+.buttons {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 315px;
+    width: 90px;
+    height: 45px;
+    box-shadow: -20px 12px 20px 0px hsla(240, 18%, 77%, 0.52);
+    border-radius: 50px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+    .next::after,
+    .prev::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+    }
+
+    .next::after {
+        background-image: url(./images/icon-next.svg);
+    }
+
+.prev::after {
+    background-image: url(./images/icon-prev.svg);
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+.sld {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-image: url(../images/PY+logo-primary.png);
+    background-position: center bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.slider {
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    position: relative;
+}
+.slide {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-img {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 40px;
+    background-image: url(./images/pattern-bg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.slide-text {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(./images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-size: 80px;
+    background-position: top center;
+}
+
+.testimonial-text {
+    font-weight: 300;
+    font-size: .7rem;
+    line-height: 1rem;
+    color: hsl(240, 38%, 20%);
+}
+
+.author-text {
+    margin-top: 20px;
+    color: hsl(240, 38%, 20%);
+    font-size: .5rem;
+    font-weight: 700;
+}
+
+    .author-text span {
+        color: hsl(240, 18%, 77%);
+        font-weight: 500;
+        display: block;
+    }
+
+.slide-img img {
+    height: 100%;
+    width: 300px;
+}
+
+.prev,
+.next {
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	cursor: pointer;
+}
+.prev:hover,
+.next:hover {
+	background-color: antiquewhite;
+}
+.buttons {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 315px;
+	width: 90px;
+	height: 45px;
+	box-shadow: -20px 12px 20px 0px hsla(240, 18%, 77%, 0.52);
+	border-radius: 50px;
+	background-color: white;
+	overflow: hidden;
+}
+.prev {
+	left: 0;
+}
+.next {
+	right: 0;
+}
+.next::after,
+.prev::after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto;
+}
+.next::after {
+	background-image: url(./images/icon-next.svg);
+}
+.prev::after {
+	background-image: url(./images/icon-prev.svg);
+}
